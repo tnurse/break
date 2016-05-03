@@ -42,18 +42,18 @@ $break--large: "(min-width: 1179px)";
 ```css
 
 //min-width: 600px (uses default units – pixels)
-@include break(600, min) {
+@include break(600, "min") {
 	background-color: #0ff;
 }
 
 //Shorthand syntax
 //max-width 50em (uses default constraint – max-width)
-@include break(50, em) {
+@include break(50, "em") {
 	background-color: #0ff;
 }
 
 //min-width: 40rem
-@include break(40, min, rem) {
+@include break(40, "min", "rem") {
 	background-color: #0ff;
 }
 
@@ -71,18 +71,18 @@ $break--large: "(min-width: 1179px)";
 ```css
 
 //min-width: 20em and max-width: 40em
-@include break(20, min, 40, max, em) {
+@include break(20, "min", 40, "max", "em") {
 	background-color: #0ff;
 }
 
 //min-width: 500px and max-width: 600px (uses default units)
-@include break(500, min, 600, max) {
+@include break(500, "min", 600, "max") {
 	background-color: #0ff;
 }
 
 //Shorthand syntax
 //min-width: 40em and max-width: 50em (uses automatic constraints)
-@include break(40, 50, em) {
+@include break(40, 50, "em") {
 	background-color: #0ff;
 }
 
@@ -94,7 +94,7 @@ $break--large: "(min-width: 1179px)";
 
 ### Outputting a non-media queried stylesheet
 ```css
-@include break(none) {
+@include break("none") {
 	background-color: #0ff;
 }
 ```
